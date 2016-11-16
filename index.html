@@ -1,0 +1,52 @@
+<DOCTYPE! html>
+<html>
+    <head>
+        <title>Rock, Paper, Scissors</title>
+    </head>
+    
+    <body>
+            <p>Choose Rock, Paper or Scissors!</p>
+        <form>
+            <input id="choice" type="text">
+            <button id="throw">Throw!</button>
+        </form>
+        
+        <p>Vs.</p>
+        
+        <p id="computer"></p>
+        
+        <p id="result">Result: </p>
+        
+        <script>
+        
+        document.getElementById("throw").onclick = function() {
+            
+            //get user input value
+            var userInput = document.getElementById("choice").value;
+            // generate a random number between 1-3 and assign to computerThrow
+            var computerThrow = Math.floor(Math.random()*3)+1;
+            
+            //display computers throw of Rock, Paper or Scissors
+            if(computerThrow==1) {
+                document.getElementById("computer").innerHTML = "Rock";
+                return false;
+            } else if (computerThrow==2) {
+                document.getElementById("computer").innerHTML = "Paper";
+                return false;
+            } else {
+                document.getElementById("computer").innerHTML = "Scissors";
+                return false;    
+            }
+            
+            //return result of game
+            
+            
+            
+        }
+        
+        
+        </script>
+    
+    </body>
+    
+</html>
